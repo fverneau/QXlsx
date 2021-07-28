@@ -130,15 +130,15 @@ QVariant Cell::readValue() const
             return QVariant();
         }
 
-        if ( vDT.type() == QVariant::DateTime )
+        if ( vDT.metaType().id() == QMetaType::QDateTime )
         {
             ret = vDT;
         }
-        else if ( vDT.type() == QVariant::Date )
+        else if ( vDT.metaType().id() == QMetaType::QDate )
         {
             ret = vDT;
         }
-        else if ( vDT.type() == QVariant::Time )
+        else if ( vDT.metaType().id() == QMetaType::QTime )
         {
             ret = vDT;
         }
