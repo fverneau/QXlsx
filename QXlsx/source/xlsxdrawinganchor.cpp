@@ -251,7 +251,8 @@ void DrawingAnchor::loadXmlObject(QXmlStreamReader &reader)
 void DrawingAnchor::loadXmlObjectConnectionShape(QXmlStreamReader &reader)
 {
     Q_ASSERT(reader.name() == QLatin1String("cxnSp"));
-    bool hasoffext=false;
+    // Unused variable hasoffext
+    // bool hasoffext=false;
     while (!reader.atEnd()) {
         reader.readNextStartElement();
         if (reader.tokenType() == QXmlStreamReader::StartElement) {
